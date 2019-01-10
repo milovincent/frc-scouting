@@ -29,13 +29,14 @@ echo $keysString . $valuesString; echo "\n";
 $addToRow = $db->prepare("INSERT INTO results ($keysString) VALUES ($valuesString)");
 $addToRow->execute();
 $nRows = $db->query("select max(`id`) from results")->fetchColumn();
-//$affectedrows = $db->prepare("UPDATE results SET :name = :value WHERE id =  $nRows");
+$nRows += 1;
+$affectedrows = $db->prepare("UPDATE results SET :name = :value WHERE id =  $nRows");
 
-echo $nRows . "\n";
-//foreach($_POST as $key=>$value){
-  //	echo $key; echo ":"; echo $value; echo "\n";
-    //$affectedrows->execute(array(':name'=>$key, ':value'=> $value));
-//}
+echo "NEW ROW NUMBER IS: $nRows";
+foreach($_POST as $key=>$value){
+  	echo $key; echo ":"; echo $value; echo "\n";
+    $affectedrows->execute(array(':name'=>$key, ':value'=> $value));
+}
 
 
 ?>
