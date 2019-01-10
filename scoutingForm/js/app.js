@@ -3,8 +3,64 @@ $(document).foundation();
 var interval=false;
 var timer=15;
 auto=true;
+  var counter = 0;
+var timer = null;
+  var times = [];
 
 jQuery( document ).ready(function( $ ) {
+$('.hatch').mousedown(function(){
+  message('HATCH',$(this).parent().attr('id')+'.hatch');
+});
+$('.cargo').mousedown(function(){
+  message('CARGO',$(this).parent().attr('id')+'.cargo');
+});
+$('g#blue-hab-1').mousedown(function(){
+    message('BLUE LANDING lowest level');
+  });
+  $('g#blue-hab-2').mousedown(function(){
+    message('BLUE LANDING 3 inch level');
+  });
+    $('g#blue-hab-3').mousedown(function(){
+    message('BLUE LANDING 3 inch level');
+  });
+    $('g#blue-hab-4').mousedown(function(){
+    message('BLUE LANDING 3 HIGH level');
+  });
+    $('g#blue-driver-penalty-1').mousedown(function(){
+    message('BLUE penalty');
+  });
+      $('g#blue-driver-penalty-2').mousedown(function(){
+    message('BLUE penalty');
+  });
+  function message(m,o){
+  	$('#message').html('timer:'+counter+', '+m+': '+o);
+    if (timer!=null){
+      logTime(o);
+    } else {
+      startInterval();
+      logTime(o);
+    }
+console.log(times);
+  }
+
+
+function logTime(o){
+  times.push({"object":o,"time":counter});
+}
+function reset()
+{
+	clearInterval(timer);
+    counter=0;
+}
+function startInterval(){
+	timer= setInterval(function(){
+        counter+=0.01;
+      	counter = Math.round(counter*100)/100;
+	}, 10);
+}
+function stopInterval(){
+    clearInterval(timer);
+}
 
   $('input[type=number]').val('0')
   $('input[type=text]').val(' ')
@@ -31,8 +87,8 @@ jQuery( document ).ready(function( $ ) {
         var a = _base_serializeArray.apply(this);
         $.each(this.find("input"), function (i, e) {
             if (e.type == "checkbox") {
-                e.checked 
-                ? a[i].value = "true" 
+                e.checked
+                ? a[i].value = "true"
                 : a.splice(i, 0, { name: e.name, value: "false" })
             }
         });
@@ -40,7 +96,7 @@ jQuery( document ).ready(function( $ ) {
     };
 })(jQuery);
   $('#time').mousedown(function() {
-		if (interval == false || (timer == 0 && auto == false)) {			
+		if (interval == false || (timer == 0 && auto == false)) {
 			timer = 14;
 			let auto = true;
 			clearInterval(interval);
@@ -60,7 +116,7 @@ jQuery( document ).ready(function( $ ) {
 				}
 			},1000);
 		}
-  });  
+  });
   // variable to hold request
   var request;
 
@@ -101,8 +157,8 @@ jQuery( document ).ready(function( $ ) {
     // Disabled form elements will not be serialized.
     $inputs.prop("disabled", true);
 // fire off the request to /form.php
-    
-		/*$.ajax({ 
+
+		/*$.ajax({
       	 url: 'http://frc.magrittescow.com/scouting/686/scoutingForm/app.php',
          data: serializedData,
          type: 'POST',
@@ -114,7 +170,8 @@ jQuery( document ).ready(function( $ ) {
     */
 
     $.ajax({
-      url: "http://frc.magrittescow.com/scouting/686/scoutingForm/app.php",
+      // url: "http://frc.magrittescow.com/scouting/686/scoutingForm/app.php",
+      url: "./app.php",
     data: serializedData,
       type: "POST",
       error: function() { console.log('Failed!');
@@ -131,7 +188,7 @@ request = $.ajax({
             error: function() { alert('Failed!'); },
         });
 
-    
+
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
@@ -169,7 +226,7 @@ request = $.ajax({
         // Reenable the inputs
         $inputs.prop("disabled", false);
     });
-      
+
   });
 });
 function setTime(val){
@@ -198,7 +255,7 @@ function check() {
   $("form :input").each(function() {
   	if ($(this).val == null) {
   		console.log('this',$(this))
-			$(this).val('empty');    		
+			$(this).val('empty');
   	}
   });
 }
