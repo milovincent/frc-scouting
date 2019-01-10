@@ -176,7 +176,7 @@ jQuery( document ).ready(function( $ ) {
   });
   */
 
-  $.ajax({
+request =  $.ajax({
     // url: "http://frc.magrittescow.com/scouting/686/scoutingForm/app.php",
     url: "./app.php",
     data: serializedData,
@@ -185,15 +185,15 @@ jQuery( document ).ready(function( $ ) {
     console.trace();
   }
 });
-request = $.ajax({
-  url: "https://script.google.com/macros/s/AKfycby42O3qBY63DFNkjaNKPNtdsLG-AzXjbmmVdn_OfuKqbsgQ-34/exec",
-  type: "GET",
-  data: serializedData,
-  crossDomain: true,
-  dataType: 'json',
-  //            success: function() { alert("Success"); },
-  error: function() { alert('Failed!'); },
-});
+// request = $.ajax({
+//   url: "https://script.google.com/macros/s/AKfycby42O3qBY63DFNkjaNKPNtdsLG-AzXjbmmVdn_OfuKqbsgQ-34/exec",
+//   type: "GET",
+//   data: serializedData,
+//   crossDomain: true,
+//   dataType: 'json',
+//   //            success: function() { alert("Success"); },
+//   error: function() { alert('Failed!'); },
+// });
 
 
 // Callback handler that will be called on success
