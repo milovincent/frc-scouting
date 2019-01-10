@@ -176,7 +176,7 @@ jQuery( document ).ready(function( $ ) {
   });
   */
 
-  request = $.ajax({
+request =  $.ajax({
     // url: "http://frc.magrittescow.com/scouting/686/scoutingForm/app.php",
     url: "./app.php",
     data: serializedData,

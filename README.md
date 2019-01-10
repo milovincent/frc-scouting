@@ -1,3 +1,3 @@
 # frc-scouting
 an FRC scouting site
-(real docs coming in april 2019)
+(real docs coming in august 2019)
