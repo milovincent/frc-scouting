@@ -84,9 +84,6 @@
           </div>
           <!-- This sticky element would stick to the window, with a marginTop of 0 -->
         </div>
-        <div class='grid-x'>
-          <div class='cell auto align-center' id='message'></div>
-        </div>
       </div>
       <div class="cell small-12">
         <div style='width:100%'>
@@ -495,12 +492,14 @@
           </svg>
         </div>
       </div>
-
-      <div class="grid-x grid-padding-x align-center cell small-12">
-        <input id='submit-form' class='cell auto success button' type="submit" value="Send" name="submittedData" />
-      </div>
     </div>
+      <div class="grid-x grid-padding-x align-center">
+        <input id='submit-form' class='cell small-12 success button' type="submit" value="Send" name="submittedData" />
+      </div>
     </form>
+    <div class='grid-x align-center'>
+      <div class='cell medium-4 center-text' id='message'></div>
+    </div>
     <style>
     .red {
       background:red;

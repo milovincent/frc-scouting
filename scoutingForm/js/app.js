@@ -226,6 +226,7 @@ request.done(function (response, textStatus, jqXHR){
   auto=true;
   $('#matchNumber').val(Number(matchNumber) + 1);
   $('#startingInfo').foundation('open');
+  $('#message').html(' ');
 
 });
 
