@@ -14,7 +14,7 @@
 
   <form id='scoutingForm' onsubmit="check()" method="post" action="app.php" name="scoutingForm">
     <!-- reveal -->
-    <div class="reveal" id="startingInfo" data-reveal>
+    <div class="reveal" id="startingInfo" data-reveal data-options="closeOnClick:false;closeOnEsc:false;">
       <div class="grid-x grid-padding-x">
         <div class="medium-4 cell">
           <label>Scout Name</label>
@@ -27,7 +27,7 @@
         <div class="medium-2 cell">
           <label>Team Number</label>
           <select name='teamNumber'>
-            <option value="" disabled selected>Select your option</option>
+            <option value="" disabled selected>Select...</option>
             <option value='5338'>5338</option>
             <option value='401'>401</option>
             <option value='87'>87</option>
@@ -42,11 +42,24 @@
         </div>
         <div class="medium-2 cell">
           <label>Team Position</label>
-          <input type="text" name='teamPosition'  />
+          <select name='teamPosition'>
+            <option value="" disabled selected>Select...</option>
+            <option value='redFar'>Red Far</option>
+            <option value='redCenter'>Red Center</option>
+            <option value='redClose'>Red Close</option>
+            <option value='blueFar'>Blue Far</option>
+            <option value='blueCenter'>Blue Center</option>
+            <option value='blueClose'>Blue Close</option>
+          </select>
         </div>
         <div class="medium-2 cell">
           <label>Robot Position</label>
-          <input type="text" name='robotPosition'  />
+          <select name='robotPosition'>
+            <option value="" disabled selected>Select...</option>
+            <option value='1'>Level 1</option>
+            <option value='2'>Level 2</option>
+            <option value='3'>Level 3</option>
+          </select>
         </div>
       </div>
       <div class="grid-x grid-padding-x">
@@ -59,15 +72,20 @@
         <div class="callout dark tight sticky" data-options="stickyOn: small" data-sticky data-margin-top="0">
           <div class="grid-x grid-padding-x">
             <div class='cell small-4 medium-4 large-offset-3 large-2'>
-              <label>Penalty</label>
+              <label>Foul</label>
               <button class='button foul'  type='button' id='foul'/>0</button>
               <input id='foulVal' type='number' value=0 name='foul' class='hidden'>
+            </div>
+            <div class='cell small-4 medium-4 large-offset-3 large-2'>
+              <label>Tech Foul</label>
+              <button class='button foul'  type='button' id='techFoul'/>0</button>
+              <input id='techFoulVal' type='number' value=0 name='techFoul' class='hidden'>
             </div>
           </div>
           <!-- This sticky element would stick to the window, with a marginTop of 0 -->
         </div>
         <div class='grid-x'>
-          <div class='cell auto align-center' id='message'>When things happen, this spot will tell you what</div>
+          <div class='cell auto align-center' id='message'></div>
         </div>
       </div>
       <div class="cell small-12">
@@ -478,7 +496,7 @@
         </div>
       </div>
 
-      <div class="grid-x grid-padding-x align-center">
+      <div class="grid-x grid-padding-x align-center cell small-12">
         <input id='submit-form' class='cell auto success button' type="submit" value="Send" name="submittedData" />
       </div>
     </div>

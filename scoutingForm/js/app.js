@@ -211,8 +211,8 @@ request.done(function (response, textStatus, jqXHR){
   $('input[type=number]').val('')
   $('input[type=text]').val(' ')
   $('textarea').val(' ')
-  $('#foul').html(0);
-  $('#techFoul').html(0);
+  $('#foul').html('0');
+  $('#techFoul').html('0');
   $('#scoutName').val(scoutName);
   $('input').prop( "checked",false );
   counter = 0;
