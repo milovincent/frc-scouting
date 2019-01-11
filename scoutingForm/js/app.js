@@ -8,7 +8,7 @@ var subTimer = null;
 var times = [];
 
 jQuery( document ).ready(function( $ ) {
-  $('#exampleModal1').foundation('open');
+  $('#startingInfo').foundation('open');
   $('.hatch').mousedown(function(){
     message('HATCH',$(this).parent().attr('id')+'.hatch');
   });
@@ -140,12 +140,18 @@ jQuery( document ).ready(function( $ ) {
     }
 
     // setup some local variables
-    var $form = $(this);
+    var $startingInfo = $('#startingInfo');
+    var $form = $("#scoutingForm");
     console.log('something fired',event)
 
 
     // Let's select and cache all the fields
-    var $inputs = $form.find("input, select, textarea");
+    var $inputs = $startingInfo.find("input, select, textarea");
+    var $formInputs = $form.find("input, select, textarea");
+    console.log('formInputs',$form, $formInputs)
+    $inputs.push.apply($inputs,$formInputs);
+
+
 
 
 
@@ -155,7 +161,7 @@ jQuery( document ).ready(function( $ ) {
     // find="=&";
     // replace="=off&";
     // var serializedData = $form.serialize().replace(new RegExp(escapeRegExp(find), 'g'), replace);
-    var serializedData = $form.serializeArray();
+    var serializedData = $inputs.serializeArray();
     console.log('serializedData',serializedData)
 
 
@@ -199,9 +205,9 @@ request =  $.ajax({
 // Callback handler that will be called on success
 request.done(function (response, textStatus, jqXHR){
   // Log a message to the console
-  console.log("Hooray, it worked!");
   var scoutName = $('#scoutName').val();
   var matchNumber = $('#matchNumber').val();
+  console.log("Hooray, ",scoutName,"in match ",matchNumber," worked!");
   $('input[type=number]').val('')
   $('input[type=text]').val(' ')
   $('textarea').val(' ')
@@ -218,8 +224,8 @@ request.done(function (response, textStatus, jqXHR){
   timer=15;
   $('#time').html('Start');
   auto=true;
-  $('#matchNumber').val(matchNumber + 1);
-  $('#exampleModal1').foundation('open');
+  $('#matchNumber').val(Number(matchNumber) + 1);
+  $('#startingInfo').foundation('open');
 
 });
 

@@ -1,0 +1,70 @@
+.top-of-page {
+	margin-top:1rem;
+}
+.foul {
+	width:100%;
+}
+.button {
+	border-radius:2rem !important;
+	color:yellow;
+}
+button {
+	width: 50px;
+}
+.callout {
+	&.dark {
+		background:#ddd;
+	}
+	&.light {
+		background:#eee;
+	}
+	&.tight {
+		padding:0 ;
+	}
+}
+.flex {
+	display:flex;
+	&.space-around {
+		justify-content: space-around;
+	}
+	&.space-between {
+		justify-content: space-between;
+	}
+}
+.hidden {
+	display:none !important;
+}
+.color-dark {
+	color:black !important;
+}
+.switch {
+	height:5rem !important;
+	border-bottom:1px solid #ddd;
+	text-align:center;
+	label {
+		text-align:center;
+	}
+	&.wide {
+		input:checked ~ .switch-paddle::after {
+			left:3.25rem;
+		}
+		.switch-paddle {
+			width:5rem;
+		}
+	}
+
+	.flex {
+		justify-content:center;
+	}
+}
+.val {
+	width: 80px !important;
+}
+[type='checkbox']+label, [type='radio']+label {
+	margin-left: 0.1rem !important;
+}
+input {
+	&.hundred {
+		width:3rem;
+	}
+}
