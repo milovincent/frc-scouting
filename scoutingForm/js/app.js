@@ -16,22 +16,40 @@ jQuery( document ).ready(function( $ ) {
     message('CARGO',$(this).parent().attr('id')+'.cargo');
   });
   $('g#blue-hab-1').mousedown(function(){
-    message('BLUE LANDING lowest level');
+    message('BLUE HAB Level 1');
   });
   $('g#blue-hab-2').mousedown(function(){
-    message('BLUE LANDING 3 inch level');
+    message('BLUE HAB Level 2');
   });
   $('g#blue-hab-3').mousedown(function(){
-    message('BLUE LANDING 3 inch level');
+    message('BLUE HAB Level 2');
   });
   $('g#blue-hab-4').mousedown(function(){
-    message('BLUE LANDING 3 HIGH level');
+    message('BLUE HAB Level 3');
   });
   $('g#blue-driver-penalty-1').mousedown(function(){
-    message('BLUE penalty');
+    message('BLUE PENALTY');
   });
   $('g#blue-driver-penalty-2').mousedown(function(){
-    message('BLUE penalty');
+    message('BLUE PENALTY');
+  });
+    $('g#blue-hab-1').mousedown(function(){
+    message('RED HAB Level 1');
+  });
+  $('g#red-hab-2').mousedown(function(){
+    message('RED HAB Level 2');
+  });
+  $('g#red-hab-3').mousedown(function(){
+    message('RED HAB Level 2');
+  });
+  $('g#red-hab-4').mousedown(function(){
+    message('RED HAB Level 3');
+  });
+  $('g#red-driver-penalty-1').mousedown(function(){
+    message('RED PENALTY');
+  });
+  $('g#red-driver-penalty-2').mousedown(function(){
+    message('RED PENALTY');
   });
   function message(m,o){
     $('#message').html('timer:'+counter+', '+m+': '+o);
