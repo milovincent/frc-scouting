@@ -6,17 +6,20 @@ auto=true;
 var counter = 0;
 var subTimer = null;
 var times = [];
+var message = null;
 
 jQuery( document ).ready(function( $ ) {
-    $('g#radial-menu').hide();
+  $('#height-select').hide();
+
   $('#startingInfo').foundation('open');
-  $('.hatch').mousedown(function(){
-    message('HATCH',$(this).parent().attr('id')+'.hatch');
+  $('.hatch').mousedown(function(e){
+    messagePlus($(this).parent().attr('id')+'.hatch');
+    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
   });
-  $('.cargo').mousedown(function(){
-    message('CARGO',$(this).parent().attr('id')+'.cargo');
-    $('g#radial-menu').show();
-    console.log("bitch");  
+  $('.cargo').mousedown(function(e){
+    messagePlus($(this).parent().attr('id')+'.cargo');
+    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+
   });
   $('g#blue-hab-1').mousedown(function(){
     message('BLUE HAB Level 1');
@@ -54,12 +57,27 @@ jQuery( document ).ready(function( $ ) {
   $('g#red-driver-penalty-2').mousedown(function(){
     message('RED PENALTY');
   });
-  $('g#radial-menu').mouseup(function(){
-    message('k;fjhsdkfhv');
-    $(this).hide();
+  $('g#radial-menu #high').mouseup(function(){
+    message('HIGH');
+    $('#height-select').hide();
+  });
+  $('g#radial-menu #medium').mouseup(function(){
+    message('MEDIUM');
+    $('#height-select').hide();
+  });
+  $('g#radial-menu #low').mouseup(function(){
+    message('LOW');
+    $('#height-select').hide();
   });
   function message(m,o){
-    $('#message').html('timer:'+counter+', '+m+': '+o);
+    console.log($message);
+    if ($message != null)
+    {
+      $('#message').html('timer:'+$message[0]+', '+m+': '+$message[1]);
+    }
+    else {
+      $('#message').html('timer:'+counter+', '+m);
+    }
     if (subTimer!=null){
       logTime(o);
     } else {
@@ -67,8 +85,11 @@ jQuery( document ).ready(function( $ ) {
       logTime(o);
     }
     console.log(times);
+    $message = null;
   }
-
+  function messagePlus(o){
+    $message = [counter,o];
+  }
 
   function logTime(o){
     times.push({"object":o,"time":counter});
