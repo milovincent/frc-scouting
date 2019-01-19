@@ -28,10 +28,10 @@
           <label>Team Number</label>
           <select name='teamNumber'>
             <option value="" disabled selected>Select...</option>
-            <option value='5338'>5338</option>
-            <option value='401'>401</option>
-            <option value='87'>87</option>
-            <option value='686'>686</option>
+            <option value='5338'>Robo Loco (5338)</option>
+            <option value='401'>another boi</option>
+            <option value='87'>Diablo (87)</option>
+            <option value='686'>us</option>
             <option value='5587'>5587</option>
             <option value='5115'>5115</option>
             <option value='4541'>4541</option>

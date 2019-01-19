@@ -33,7 +33,7 @@ jQuery( document ).ready(function( $ ) {
   $('g#blue-driver-penalty-2').mousedown(function(){
     message('BLUE PENALTY');
   });
-    $('g#blue-hab-1').mousedown(function(){
+  $('g#red-hab-1').mousedown(function(){
     message('RED HAB Level 1');
   });
   $('g#red-hab-2').mousedown(function(){
