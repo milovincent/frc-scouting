@@ -7,10 +7,9 @@
 .button {
 	border-radius:2rem !important;
 	color:yellow;
-}
-button {
 	width: 50px;
 }
+
 .callout {
 	&.dark {
 		background:#ddd;
@@ -22,6 +21,7 @@ button {
 		padding:0 ;
 	}
 }
+ 
 .flex {
 	display:flex;
 	&.space-around {

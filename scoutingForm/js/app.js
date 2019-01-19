@@ -8,12 +8,15 @@ var subTimer = null;
 var times = [];
 
 jQuery( document ).ready(function( $ ) {
+    $('g#radial-menu').hide();
   $('#startingInfo').foundation('open');
   $('.hatch').mousedown(function(){
     message('HATCH',$(this).parent().attr('id')+'.hatch');
   });
   $('.cargo').mousedown(function(){
     message('CARGO',$(this).parent().attr('id')+'.cargo');
+    $('g#radial-menu').show();
+    console.log("bitch");  
   });
   $('g#blue-hab-1').mousedown(function(){
     message('BLUE HAB Level 1');
@@ -50,6 +53,10 @@ jQuery( document ).ready(function( $ ) {
   });
   $('g#red-driver-penalty-2').mousedown(function(){
     message('RED PENALTY');
+  });
+  $('g#radial-menu').mouseup(function(){
+    message('k;fjhsdkfhv');
+    $(this).hide();
   });
   function message(m,o){
     $('#message').html('timer:'+counter+', '+m+': '+o);
