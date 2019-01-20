@@ -13,13 +13,38 @@ jQuery( document ).ready(function( $ ) {
 
   $('#startingInfo').foundation('open');
   $('.hatch').mousedown(function(e){
-    messagePlus($(this).parent().attr('id')+'.hatch');
+    if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
+      messagePlus($(this).parent().attr('id')+'.hatch');
     $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+    } else {
+        message($(this).parent().attr('id')+'.hatch');
+    }
+      
   });
   $('.cargo').mousedown(function(e){
-    messagePlus($(this).parent().attr('id')+'.cargo');
+    if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
+      messagePlus($(this).parent().attr('id')+'.cargo');
     $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
-
+} else {
+        message($(this).parent().attr('id')+'.cargo');
+    }
+  });
+    $('.hatch-miss').mousedown(function(e){
+    if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
+      messagePlus($(this).parent().attr('id')+'.hatch-miss');
+    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+    } else {
+        message($(this).parent().attr('id')+'.hatch-miss');
+    }
+      
+  });
+  $('.cargo-miss').mousedown(function(e){
+    if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
+      messagePlus($(this).parent().attr('id')+'.cargo-miss');
+    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+} else {
+        message($(this).parent().attr('id')+'.cargo-miss');
+    }
   });
   $('g#blue-hab-1').mousedown(function(){
     message('BLUE HAB Level 1');
