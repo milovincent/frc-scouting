@@ -9,10 +9,18 @@
 	color:yellow;
 	width: 50px;
 }
-
+form {
+	background-color: black;
+}
+html {
+	background: black;
+}
+.reveal {
+	background-color: $gray !important;
+}
 .callout {
 	&.dark {
-		background:#ddd;
+		background:#dark-gray;
 	}
 	&.light {
 		background:#eee;
