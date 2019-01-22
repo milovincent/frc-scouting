@@ -129,7 +129,7 @@ jQuery( document ).ready(function( $ ) {
   }
 
   function logTime(o){
-    $times.push({"name":o,"value":counter});
+    $times.push({"name":counter,"value":o});
   }
   function reset()
   {

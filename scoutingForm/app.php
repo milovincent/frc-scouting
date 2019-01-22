@@ -2,10 +2,10 @@
 // $db = new PDO('mysql:host=mysql.frc.magrittescow.com;dbname=frcdata;charset=utf8mb4', 'miloszecket', 'pass4robotics');
 $db = new PDO('mysql:host=localhost;dbname=frcdata;charset=utf8mb4', 'root', 'mysql');
 echo 'connected, uploading ';
-echo implode($_FILES);
+echo implode(' ', $_FILES);
 echo "\n";
-echo implode($_POST);
-
+echo implode(',', $_POST);
+echo "\n";
 //INSERT INTO table_name (column1, column2, column3, ...)
 //VALUES (value1, value2, value3, ...);
 $keys = array();
@@ -39,9 +39,9 @@ $nRows += 1;
 // }
 
 foreach(array_slice($_POST, 7, NULL, TRUE) as $key=>$value){
-$addTimes = $db->prepare("INSERT INTO events (`id`, `timer`, `event`) VALUES ('".$nRows."', '".$value."', '".$key."')");
+$addTimes = $db->prepare("INSERT INTO events (`id`, `timer`, `event`) VALUES ('".$nRows."', '".str_replace("_", ".", $key)."', '".$value."')");
   $addTimes->execute();
 
-  echo $key." happened at t+".$value; echo "\n";
+  echo $key." was the time that ".$value." happened"; echo "\n";
 }
 ?>
