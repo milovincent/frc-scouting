@@ -6,15 +6,15 @@ auto=true;
 var counter = 0;
 var subTimer = null;
 var times = [];
-var message = [];
+$message = null;
 
 jQuery( document ).ready(function( $ ) {
   $('#height-select').hide();
 
   $('#startingInfo').foundation('open');
-  function message(m,o){
-     $message = [counter,o];
-      console.log($message);
+
+  function message(m){
+    console.log($message);
     if ($message != null)
     {
       $('#message').html('timer:'+$message[0]+', '+m+': '+$message[1]);
@@ -23,14 +23,15 @@ jQuery( document ).ready(function( $ ) {
       $('#message').html('timer:'+counter+', '+m);
     }
     if (subTimer!=null){
-      logTime(o);
+      //logTime(o);
     } else {
       startInterval();
-      logTime(o);
+      //logTime(o);
     }
     console.log(times);
     $message = null;
   }
+
   $('g#blue-hab-1').mousedown(function(){
     message('BLUE HAB Level 1');
   });
@@ -81,16 +82,16 @@ jQuery( document ).ready(function( $ ) {
   });
     $('.hatch').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
-      messagePlus($(this).parent().attr('id')+'.hatch');
+      hmlMessage($(this).parent().attr('id')+'.hatch');
     $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
     } else {
         message($(this).parent().attr('id')+'.hatch');
     }
-      
+
   });
   $('.cargo').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
-      messagePlus($(this).parent().attr('id')+'.cargo');
+      hmlMessage($(this).parent().attr('id')+'.cargo');
     $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
 } else {
         message($(this).parent().attr('id')+'.cargo');
@@ -98,23 +99,23 @@ jQuery( document ).ready(function( $ ) {
   });
     $('.hatch-miss').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
-      messagePlus($(this).parent().attr('id')+'.hatch-miss');
+      hmlMessage($(this).parent().attr('id')+'.hatch-miss');
     $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
     } else {
         message($(this).parent().attr('id')+'.hatch-miss');
     }
-      
+
   });
   $('.cargo-miss').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
-      messagePlus($(this).parent().attr('id')+'.cargo-miss');
+      hmlMessage($(this).parent().attr('id')+'.cargo-miss');
     $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
 } else {
         message($(this).parent().attr('id')+'.cargo-miss');
     }
   });
-  
-  function messagePlus(o){
+
+  function hmlMessage(o){
     $message = [counter,o];
   }
 
