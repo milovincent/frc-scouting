@@ -11,7 +11,7 @@ echo implode($_POST);
 $keys = array();
 $values = array();
 $tableString = "`id` INT, ";
-foreach($_POST as $key=>$value){
+foreach(array_slice($_POST, 0, 7, TRUE) as $key=>$value){
   array_push($keys, "`".$key."`");
   array_push($values, "'".$value."'");
   $tableString = "$tableString `$key` TEXT, ";
