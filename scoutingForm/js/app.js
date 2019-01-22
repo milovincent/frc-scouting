@@ -5,7 +5,7 @@ var timer=15;
 auto=true;
 var counter = 0;
 var subTimer = null;
-var times = [];
+$times = null;
 $message = null;
 
 jQuery( document ).ready(function( $ ) {
@@ -14,23 +14,29 @@ jQuery( document ).ready(function( $ ) {
   $('#startingInfo').foundation('open');
 
   function message(m){
+    var object;
     console.log($message);
     if ($message != null)
     {
-      $('#message').html('timer:'+$message[0]+', '+m+': '+$message[1]);
+      object = $message[1]+'.'+m;
+      $('#message').html('timer:'+$message[0]+', '+object);
     }
     else {
-      $('#message').html('timer:'+counter+', '+m);
+      object = m;
+      $('#message').html('timer:'+counter+', '+object);
     }
     if (subTimer!=null){
-      //logTime(o);
+      logTime(object);
     } else {
       startInterval();
-      //logTime(o);
+      logTime(object);
     }
-    console.log(times);
+    console.log($times);
     $message = null;
   }
+
+
+
 
   $('g#blue-hab-1').mousedown(function(){
     message('BLUE HAB Level 1');
@@ -81,17 +87,18 @@ jQuery( document ).ready(function( $ ) {
     message('RED PENALTY');
   });
   $('g#radial-menu #high').mouseup(function(){
-    message('HIGH');
+    message('high');
     $('#height-select').hide();
   });
   $('g#radial-menu #medium').mouseup(function(){
-    message('MEDIUM');
+    message('medium');
     $('#height-select').hide();
   });
   $('g#radial-menu #low').mouseup(function(){
-    message('LOW');
+    message('low');
     $('#height-select').hide();
   });
+
   $('.hatch').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
       hmlMessage($(this).parent().attr('id')+'.hatch');
@@ -132,7 +139,7 @@ jQuery( document ).ready(function( $ ) {
   }
 
   function logTime(o){
-    times.push({"object":o,"time":counter});
+    $times.push({"object":o,"time":counter});
   }
   function reset()
   {
@@ -158,7 +165,7 @@ jQuery( document ).ready(function( $ ) {
   $('#foul').html('0');
   $('#techFoul').html('0');
   $('input').prop( "checked",false );
-  times = [];
+  $times = [];
   clearInterval(subTimer);
   subTimer = null;
 
@@ -248,6 +255,7 @@ jQuery( document ).ready(function( $ ) {
     // replace="=off&";
     // var serializedData = $form.serialize().replace(new RegExp(escapeRegExp(find), 'g'), replace);
     var serializedData = $inputs.serializeArray();
+    serializedData = $.merge(serializedData,$times);
     console.log('serializedData',serializedData)
 
 
@@ -303,7 +311,7 @@ request.done(function (response, textStatus, jqXHR){
   $('input').prop( "checked",false );
   counter = 0;
   clearInterval(subTimer);
-  times = [];
+  $times = [];
   subTimer = null;
   clearInterval(interval);
   interval=false;
