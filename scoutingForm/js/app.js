@@ -41,6 +41,18 @@ jQuery( document ).ready(function( $ ) {
   $('g#blue-hab-3').mousedown(function(){
     message('BLUE HAB Level 2');
   });
+  $('.peek').mousedown(function(){
+    message($(this).parent().attr('id')+'.peek');
+  });
+  $('.player-cargo').mousedown(function(){
+    message($(this).parent().attr('id')+'.player-cargo');
+  });
+  $('.player-hatch').mousedown(function(){
+    message($(this).parent().attr('id')+'.player-hatch');
+  });
+  $('.depot').mousedown(function(){
+    message($(this).parent().attr('id')+'.depot');
+  });
   $('g#blue-hab-4').mousedown(function(){
     message('BLUE HAB Level 3');
   });
@@ -80,38 +92,38 @@ jQuery( document ).ready(function( $ ) {
     message('LOW');
     $('#height-select').hide();
   });
-    $('.hatch').mousedown(function(e){
+  $('.hatch').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
       hmlMessage($(this).parent().attr('id')+'.hatch');
-    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+      $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
     } else {
-        message($(this).parent().attr('id')+'.hatch');
+      message($(this).parent().attr('id')+'.hatch');
     }
 
   });
   $('.cargo').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
       hmlMessage($(this).parent().attr('id')+'.cargo');
-    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
-} else {
-        message($(this).parent().attr('id')+'.cargo');
+      $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+    } else {
+      message($(this).parent().attr('id')+'.cargo');
     }
   });
-    $('.hatch-miss').mousedown(function(e){
+  $('.hatch-miss').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
       hmlMessage($(this).parent().attr('id')+'.hatch-miss');
-    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+      $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
     } else {
-        message($(this).parent().attr('id')+'.hatch-miss');
+      message($(this).parent().attr('id')+'.hatch-miss');
     }
 
   });
   $('.cargo-miss').mousedown(function(e){
     if ($(this).parent().attr('id')!='blue-cargo'&&$(this).parent().attr('id')!='red-cargo'){
       hmlMessage($(this).parent().attr('id')+'.cargo-miss');
-    $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
-} else {
-        message($(this).parent().attr('id')+'.cargo-miss');
+      $('#height-select').show().css("left", e.pageX-$('#height-select').width()/2).css("top", e.pageY-$('#height-select').height()/2);
+    } else {
+      message($(this).parent().attr('id')+'.cargo-miss');
     }
   });
 
@@ -256,7 +268,7 @@ jQuery( document ).ready(function( $ ) {
   });
   */
 
-request =  $.ajax({
+  request =  $.ajax({
     // url: "http://frc.magrittescow.com/scouting/686/scoutingForm/app.php",
     url: "./app.php",
     data: serializedData,

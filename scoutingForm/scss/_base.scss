@@ -16,11 +16,15 @@ html {
 	background: black;
 }
 .reveal {
-	background-color: $gray !important;
+	background-color: $black !important;
+
+}
+label{
+    color: $white !important;
 }
 .callout {
 	&.dark {
-		background:#dark-gray;
+		background:$black;
 	}
 	&.light {
 		background:#eee;
