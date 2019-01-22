@@ -39,13 +39,13 @@ jQuery( document ).ready(function( $ ) {
 
 
   $('g#blue-hab-1').mousedown(function(){
-    message('BLUE HAB Level 1');
+    message('blue-hab-1');
   });
   $('g#blue-hab-2').mousedown(function(){
-    message('BLUE HAB Level 2');
+    message('blue-hab-2');
   });
   $('g#blue-hab-3').mousedown(function(){
-    message('BLUE HAB Level 2');
+    message('blue-hab-2');
   });
   $('.peek').mousedown(function(){
     message($(this).parent().attr('id')+'.peek');
@@ -60,32 +60,22 @@ jQuery( document ).ready(function( $ ) {
     message($(this).parent().attr('id')+'.depot');
   });
   $('g#blue-hab-4').mousedown(function(){
-    message('BLUE HAB Level 3');
+    message('blue-hab-3');
   });
-  $('g#blue-driver-penalty-1').mousedown(function(){
-    message('BLUE PENALTY');
-  });
-  $('g#blue-driver-penalty-2').mousedown(function(){
-    message('BLUE PENALTY');
-  });
+
   $('g#red-hab-1').mousedown(function(){
-    message('RED HAB Level 1');
+    message('red-hab-1');
   });
   $('g#red-hab-2').mousedown(function(){
-    message('RED HAB Level 2');
+    message('red-hab-2');
   });
   $('g#red-hab-3').mousedown(function(){
-    message('RED HAB Level 2');
+    message('red-hab-2');
   });
   $('g#red-hab-4').mousedown(function(){
-    message('RED HAB Level 3');
+    message('red-hab-3');
   });
-  $('g#red-driver-penalty-1').mousedown(function(){
-    message('RED PENALTY');
-  });
-  $('g#red-driver-penalty-2').mousedown(function(){
-    message('RED PENALTY');
-  });
+
   $('g#radial-menu #high').mouseup(function(){
     message('high');
     $('#height-select').hide();
@@ -139,7 +129,7 @@ jQuery( document ).ready(function( $ ) {
   }
 
   function logTime(o){
-    $times.push({"object":o,"time":counter});
+    $times.push({"name":o,"value":counter});
   }
   function reset()
   {

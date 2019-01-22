@@ -30,13 +30,18 @@ $addToRow = $db->prepare("INSERT INTO results ($keysString) VALUES ($valuesStrin
 $addToRow->execute();
 $nRows = $db->query("select max(`id`) from results")->fetchColumn();
 $nRows += 1;
-$affectedrows = $db->prepare("UPDATE results SET :name = :value WHERE id =  $nRows");
+// $affectedrows = $db->prepare("UPDATE results SET :name = :value WHERE id =  $nRows");
 
-echo "NEW ROW NUMBER IS: $nRows";
-foreach($_POST as $key=>$value){
-  	echo $key; echo ":"; echo $value; echo "\n";
-    $affectedrows->execute(array(':name'=>$key, ':value'=> $value));
+// echo "NEW ROW NUMBER IS: $nRows";
+// foreach(array_slice($_POST, 0, 7, TRUE) as $key=>$value){
+//   	echo $key; echo ":"; echo $value; echo "\n";
+//     $affectedrows->execute(array(':name'=>$key, ':value'=> $value));
+// }
+
+foreach(array_slice($_POST, 7, NULL, TRUE) as $key=>$value){
+$addTimes = $db->prepare("INSERT INTO events (`id`, `timer`, `event`) VALUES ('".$nRows."', '".$value."', '".$key."')");
+  $addTimes->execute();
+
+  echo $key." happened at t+".$value; echo "\n";
 }
-
-
 ?>
