@@ -40,7 +40,7 @@ $nRows = $db->query("select max(`id`) from results")->fetchColumn();
 foreach(array_slice($_POST, 7, NULL, TRUE) as $key=>$value){
 $addTimes = $db->prepare("INSERT INTO events (`id`, `timer`, `event`) VALUES ('".$nRows."', '".str_replace("_", ".", $key)."', '".$value."')");
   $addTimes->execute();
-
+ 
   echo $key." was the time that ".$value." happened"; echo "\n";
 }
 ?>
