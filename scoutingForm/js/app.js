@@ -162,11 +162,13 @@ jQuery( document ).ready(function( $ ) {
 
   $('#foul').mousedown(function(){
     var foulVal = Number($('#foulVal').val())+1;
+    message('foul');
     $('#foulVal').val(foulVal);
     $('#foul').html(foulVal);
   });
   $('#techFoul').mousedown(function(){
     var techFoulVal = Number($('#techFoulVal').val())+1;
+    message('techFoul');
     $('#techFoulVal').val(techFoulVal);
     $('#techFoul').html(techFoulVal) ;
   });
