@@ -29,7 +29,6 @@ echo $keysString . $valuesString; echo "\n";
 $addToRow = $db->prepare("INSERT INTO results ($keysString) VALUES ($valuesString)");
 $addToRow->execute();
 $nRows = $db->query("select max(`id`) from results")->fetchColumn();
-$nRows += 1;
 // $affectedrows = $db->prepare("UPDATE results SET :name = :value WHERE id =  $nRows");
 
 // echo "NEW ROW NUMBER IS: $nRows";
