@@ -68,8 +68,11 @@ jQuery( document ).ready(function( $ ) {
   $('g#field-cargo').mousedown(function(){
     message('field-cargo');
   });
-  $('g#drop').mousedown(function(){
-    message('drop');
+  $('g#drop-hatch').mousedown(function(){
+    message('drop-hatch');
+  });
+  $('g#drop-cargo').mousedown(function(){
+    message('drop-cargo');
   });
   $('g#red-hab-1').mousedown(function(){
     message('red-hab-1');
