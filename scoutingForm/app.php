@@ -11,7 +11,7 @@ echo "\n";
 $keys = array();
 $values = array();
 $tableString = "`id` INT, ";
-foreach(array_slice($_POST, 0, 7, TRUE) as $key=>$value){
+foreach(array_slice($_POST, 0, 8, TRUE) as $key=>$value){
   array_push($keys, "`".$key."`");
   array_push($values, "'".$value."'");
   $tableString = "$tableString `$key` TEXT, ";
@@ -37,10 +37,10 @@ $nRows = $db->query("select max(`id`) from results")->fetchColumn();
 //     $affectedrows->execute(array(':name'=>$key, ':value'=> $value));
 // }
 
-foreach(array_slice($_POST, 7, NULL, TRUE) as $key=>$value){
+foreach(array_slice($_POST, 8, NULL, TRUE) as $key=>$value){
 $addTimes = $db->prepare("INSERT INTO events (`id`, `timer`, `event`) VALUES ('".$nRows."', '".str_replace("_", ".", $key)."', '".$value."')");
   $addTimes->execute();
- 
+
   echo $key." was the time that ".$value." happened"; echo "\n";
 }
 ?>
