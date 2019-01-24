@@ -58,7 +58,9 @@ $('.required').change(function(){
        $('#begin').html('Fill everything out please!').removeClass('success').addClass('alert');
      }
    });
-
+$('g#autoMove').mousedown(function(){
+  message('moved-in-sandstorm');
+});
 
   $('g#blue-hab-1').mousedown(function(){
     message('blue-hab-1');

@@ -539,6 +539,15 @@
                     </g>
                 </g>
             </g>
+            <g id="autoMove">
+                <g transform="matrix(1.15263,0,-2.84146e-32,1,73.6873,95.821)">
+                    <path d="M992.177,664.339C992.177,646.113 977.379,631.315 959.153,631.315L731.769,631.315C713.543,631.315 698.745,646.113 698.745,664.339L698.745,730.388C698.745,748.614 713.543,763.412 731.769,763.412L959.153,763.412C977.379,763.412 992.177,748.614 992.177,730.388L992.177,664.339Z" style="fill:rgb(22,22,22);fill-opacity:0.8;stroke:white;stroke-width:3.28px;"/>
+                </g>
+                <g transform="matrix(0.562765,0,0,0.488243,638.883,438.266)">
+                    <text x="537.229px" y="716.177px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:67.767px;fill:rgb(242,242,242);">M<tspan x="600.456px 659.944px 711.921px 763.898px 819.614px 845.218px 870.823px " y="716.177px 716.177px 716.177px 716.177px 716.177px 716.177px 716.177px ">OVED IN</tspan></text>
+                    <text x="483.644px" y="786.161px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:67.767px;fill:rgb(242,242,242);">S<tspan x="535.621px 591.337px 647.053px 702.768px 754.745px 801.692px 861.18px 916.896px " y="786.161px 786.161px 786.161px 786.161px 786.161px 786.161px 786.161px 786.161px ">ANDSTORM</tspan></text>
+                </g>
+            </g>
         </g>
     </g>
 </svg>
