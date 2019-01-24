@@ -18,7 +18,7 @@
       <div class="grid-x grid-padding-x">
         <div class="medium-4 cell">
           <label>Scout Name</label>
-          <input type="text" id='scoutName' name='scoutName' />
+          <input type="text" id='scoutName' value='' name='scoutName' />
         </div>
         <div class="medium-2 cell">
           <label>Match Number</label>
@@ -26,7 +26,7 @@
         </div>
         <div class="medium-2 cell">
           <label>Team Number</label>
-          <select name='teamNumber'>
+          <select id='teamNumber' name='teamNumber'>
             <option value="" disabled selected>Select...</option>
             <option value='5338'>Robo Loco (5338)</option>
             <option value='401'>another boi</option>
@@ -42,7 +42,7 @@
         </div>
         <div class="medium-2 cell">
           <label>Team Position</label>
-          <select name='teamPosition'>
+          <select id='teamPosition' name='teamPosition'>
             <option value="" disabled selected>Select...</option>
             <option value='redFar'>Red Far</option>
             <option value='redCenter'>Red Center</option>
@@ -54,7 +54,7 @@
         </div>
         <div class="medium-2 cell">
           <label>Robot Position</label>
-          <select name='robotPosition'>
+          <select id='robotPosition' name='robotPosition'>
             <option value="" disabled selected>Select...</option>
             <option value='1'>Level 1</option>
             <option value='2'>Level 2</option>
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="grid-x grid-padding-x">
-        <button id='begin' class="cell auto align-center button success" data-close>Start</button>
+        <button id='begin' class=" cell auto align-center button success" >Start</button>
       </div>
     </div>
 
@@ -650,6 +650,10 @@
     <div class="grid-x grid-padding-x align-center">
       <input id='submit-form' class='cell small-12 success button' type="submit" value="Send" name="submittedData" />
     </div>
+    <div class="grid-x grid-padding-x align-center">
+      <input id='comments' class='cell small-12 ' type="textarea" value='' name="comments" />
+    </div>
+
   </form>
   <div class='grid-x align-center'>
     <div class='cell medium-4 center-text' id='message'></div>

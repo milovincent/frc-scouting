@@ -36,6 +36,16 @@ jQuery( document ).ready(function( $ ) {
   }
 
 
+  $('#begin').mousedown(function(){
+    if (($('#scoutName').val() != '') && ($('#matchNumber').val()!= 0)  && ($('#teamNumber').val()!= undefined)  && ($('#teamPosition').val()!= undefined)  && ($('#robotPosition').val()!= undefined)  ){
+      $('#startingInfo').foundation('close');
+      $('#begin').html('Start').removeClass('alert').addClass('success');
+
+     }
+     else {
+       $('#begin').html('Fill everything out please!').removeClass('success').addClass('alert');
+     }
+   });
 
 
   $('g#blue-hab-1').mousedown(function(){
@@ -164,7 +174,7 @@ jQuery( document ).ready(function( $ ) {
   });
 
   $('input[type=number]').val('0')
-  $('input[type=text]').val(' ')
+  $('input[type=text]').val('')
   $('textarea').val('')
   $('#foul').html('0');
   $('#techFoul').html('0');
@@ -309,11 +319,12 @@ request.done(function (response, textStatus, jqXHR){
   var matchNumber = $('#matchNumber').val();
   console.log("Hooray, ",scoutName,"in match ",matchNumber," worked!");
   $('input[type=number]').val('')
-  $('input[type=text]').val(' ')
-  $('textarea').val(' ')
+  $('input[type=text]').val('')
+  $('textarea').val('')
   $('#foul').html('0');
   $('#techFoul').html('0');
   $('#scoutName').val(scoutName);
+  $('#comments').val(' ');
   $('input').prop( "checked",false );
   counter = 0;
   clearInterval(subTimer);
