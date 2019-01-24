@@ -420,6 +420,14 @@
                 </g>
                 <path d="M1160.65,702.452C1044.45,702.452 950.257,796.649 950.257,912.846L1160.65,912.846L1160.65,702.452Z" style="fill:none;stroke:rgb(255,0,0);stroke-width:17.33px;"/>
             </g>
+            <g id="broke" transform="matrix(1.56806,0,0,1.56806,147.569,-894.304)">
+                <g transform="matrix(0.73507,0,0,0.637732,-47.1164,631.434)">
+                    <circle cx="1504.38" cy="1216.41" r="140.491" style="fill:rgb(22,22,22);fill-opacity:0.8;stroke:white;stroke-width:3.28px;"/>
+                </g>
+                <g transform="matrix(0.313995,0,0,0.272416,612.889,1078.08)">
+                    <text x="1175.06px" y="1251.5px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:121.338px;fill:rgb(242,242,242);">B<tspan x="1274.82px 1374.58px 1481.09px 1580.85px " y="1251.5px 1251.5px 1251.5px 1251.5px ">ROKE</tspan></text>
+                </g>
+            </g>
             <g id="radial-menu" transform="matrix(1,0,0,1,-885.601,-88.0137)">
                 <g id="high">
                     <g transform="matrix(-0.576316,0.866025,-0.998209,-0.5,2157.97,-186.826)">
@@ -497,12 +505,12 @@
                     </g>
                 </g>
             </g>
-            <g id="field" transform="matrix(1.56806,0,0,1.56806,147.569,-894.304)">
+            <g id="field" transform="matrix(-1.56806,-1.66603e-16,2.21342e-16,-1.56806,3467.81,1606.6)">
                 <g id="drop-cargo">
                     <g id="drop" transform="matrix(0.574954,-0.866707,0.998994,0.498818,-133.561,1188.14)">
                         <path d="M905.527,789.86C937.048,771.661 956.466,738.029 956.466,701.631C956.466,683.748 951.758,666.179 942.817,650.692L854.588,701.631L905.527,789.86Z" style="fill:rgb(22,22,22);fill-opacity:0.8;stroke:white;stroke-width:2.09px;"/>
                     </g>
-                    <g transform="matrix(0.48655,0,0,0.42212,780.437,511.707)">
+                    <g transform="matrix(-0.48655,-5.16948e-17,5.95851e-17,-0.42212,1445.53,999.092)">
                         <text x="592.03px" y="597.663px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:56.877px;fill:rgb(242,242,242);">D<tspan x="638.793px 685.555px 735.484px " y="597.663px 597.663px 597.663px ">ROP</tspan></text>
                     </g>
                 </g>
@@ -510,7 +518,7 @@
                     <g id="drop1" serif:id="drop" transform="matrix(0.574954,-0.866707,0.998994,0.498818,-133.561,1188.14)">
                         <path d="M905.527,789.86C937.048,771.661 956.466,738.029 956.466,701.631C956.466,683.748 951.758,666.179 942.817,650.692L854.588,701.631L905.527,789.86Z" style="fill:rgb(22,22,22);fill-opacity:0.8;stroke:white;stroke-width:2.09px;"/>
                     </g>
-                    <g transform="matrix(-0.00114119,0.422119,-0.486548,-0.000990071,1388.74,467.067)">
+                    <g transform="matrix(0.00114119,-0.422119,0.486548,0.000990071,825.402,1042.94)">
                         <text x="592.03px" y="597.663px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:56.877px;fill:rgb(242,242,242);">D<tspan x="638.793px 685.555px 735.484px " y="597.663px 597.663px 597.663px ">ROP</tspan></text>
                     </g>
                 </g>

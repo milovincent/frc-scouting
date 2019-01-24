@@ -71,6 +71,9 @@ jQuery( document ).ready(function( $ ) {
   $('g#drop-hatch').mousedown(function(){
     message('drop-hatch');
   });
+  $('g#broke').mousedown(function(){
+    message('broke');
+  });
   $('g#drop-cargo').mousedown(function(){
     message('drop-cargo');
   });
