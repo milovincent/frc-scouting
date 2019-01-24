@@ -35,6 +35,18 @@ jQuery( document ).ready(function( $ ) {
     $message = null;
   }
 
+  function checkFields(){
+    if (($('#scoutName').val() != '') && ($('#matchNumber').val()!= 0)  && ($('#teamNumber').val()!= undefined)  && ($('#teamPosition').val()!= undefined)  && ($('#robotPosition').val()!= undefined)  ){
+      $('#begin').html('Start').removeClass('alert').addClass('success');
+     }
+     else {
+       $('#begin').html('All these fields need to be full').removeClass('success').addClass('alert');
+     }
+  }
+
+$('.required').change(function(){
+  checkFields();
+});
 
   $('#begin').mousedown(function(){
     if (($('#scoutName').val() != '') && ($('#matchNumber').val()!= 0)  && ($('#teamNumber').val()!= undefined)  && ($('#teamPosition').val()!= undefined)  && ($('#robotPosition').val()!= undefined)  ){

@@ -18,15 +18,15 @@
       <div class="grid-x grid-padding-x">
         <div class="medium-4 cell">
           <label>Scout Name</label>
-          <input type="text" id='scoutName' value='' name='scoutName' />
+          <input class='required' type="text" id='scoutName' value='' name='scoutName' />
         </div>
         <div class="medium-2 cell">
           <label>Match Number</label>
-          <input type="number" id='matchNumber' name='matchNumber' min='1' step='1' />
+          <input class='required' type="number" id='matchNumber' name='matchNumber' min='1' step='1' />
         </div>
         <div class="medium-2 cell">
           <label>Team Number</label>
-          <select id='teamNumber' name='teamNumber'>
+          <select  class='required' id='teamNumber' name='teamNumber'>
             <option value="" disabled selected>Select...</option>
             <option value='5338'>Robo Loco (5338)</option>
             <option value='401'>another boi</option>
@@ -42,7 +42,7 @@
         </div>
         <div class="medium-2 cell">
           <label>Team Position</label>
-          <select id='teamPosition' name='teamPosition'>
+          <select class='required' id='teamPosition' name='teamPosition'>
             <option value="" disabled selected>Select...</option>
             <option value='redFar'>Red Far</option>
             <option value='redCenter'>Red Center</option>
@@ -54,7 +54,7 @@
         </div>
         <div class="medium-2 cell">
           <label>Robot Position</label>
-          <select id='robotPosition' name='robotPosition'>
+          <select class='required' id='robotPosition' name='robotPosition'>
             <option value="" disabled selected>Select...</option>
             <option value='1'>Level 1</option>
             <option value='2'>Level 2</option>
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="grid-x grid-padding-x">
-        <button id='begin' class=" cell auto align-center button success" >Start</button>
+        <button id='begin' class=" cell auto align-center button secondary" >Please fill out all fields</button>
       </div>
     </div>
 
