@@ -62,7 +62,15 @@ jQuery( document ).ready(function( $ ) {
   $('g#blue-hab-4').mousedown(function(){
     message('blue-hab-3');
   });
-
+  $('g#field-hatch').mousedown(function(){
+    message('field-hatch');
+  });
+  $('g#field-cargo').mousedown(function(){
+    message('field-cargo');
+  });
+  $('g#drop').mousedown(function(){
+    message('drop');
+  });
   $('g#red-hab-1').mousedown(function(){
     message('red-hab-1');
   });
