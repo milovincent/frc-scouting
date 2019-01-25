@@ -61,6 +61,11 @@ $('.required').change(function(){
 $('g#autoMove').mousedown(function(){
   message('moved-in-sandstorm');
 });
+$('g#undo').mousedown(function(){
+  $times.pop();
+  console.log($times);
+  $('#message').html('undone');
+});
 
   $('g#blue-hab-1').mousedown(function(){
     message('blue-hab-1');

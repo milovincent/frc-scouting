@@ -548,6 +548,14 @@
                     <text x="483.644px" y="786.161px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:67.767px;fill:rgb(242,242,242);">S<tspan x="535.621px 591.337px 647.053px 702.768px 754.745px 801.692px 861.18px 916.896px " y="786.161px 786.161px 786.161px 786.161px 786.161px 786.161px 786.161px 786.161px ">ANDSTORM</tspan></text>
                 </g>
             </g>
+            <g id="undo">
+                <g transform="matrix(1.15263,0,0,1,73.6873,95.821)">
+                    <path d="M2359.48,688.95C2359.48,664.057 2339.27,643.847 2314.38,643.847L2094.68,643.847C2069.79,643.847 2049.58,664.057 2049.58,688.95L2049.58,779.155C2049.58,804.048 2069.79,824.258 2094.68,824.258L2314.38,824.258C2339.27,824.258 2359.48,804.048 2359.48,779.155L2359.48,688.95Z" style="fill:rgb(22,22,22);fill-opacity:0.8;stroke:white;stroke-width:3.28px;"/>
+                </g>
+                <g transform="matrix(0.77978,0,0,0.676521,987.941,342.186)">
+                    <text x="1920.31px" y="757.116px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:101.258px;fill:rgb(242,242,242);">U<tspan x="2003.56px 2086.81px 2170.07px " y="757.116px 757.116px 757.116px ">NDO</tspan></text>
+                </g>
+            </g>
         </g>
     </g>
 </svg>
