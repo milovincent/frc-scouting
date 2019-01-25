@@ -113,7 +113,11 @@
       </div>
       <div class="grid-x grid-padding-x">
         <button id='begin' class=" cell auto align-center button secondary" >Please fill out all fields</button>
+
       </div>
+<!-- <div class="grid-x grid-padding-x">
+      <label>Touch things as they happen. The middle wheel is for field pickups. Fill out match details and press the green button to begin.</label>
+</div> -->
     </div>
 
     <div class="grid-x">
@@ -726,11 +730,12 @@
       </div>
     </div>
     <div class="grid-x grid-padding-x align-center">
-      <input id='submit-form' class='cell small-12 success button' type="submit" value="Send" name="submittedData" />
+      <input id='comments' class='cell small-12 ' type="textarea" value='' placeholder="comments" name="comments" />
     </div>
     <div class="grid-x grid-padding-x align-center">
-      <input id='comments' class='cell small-12 ' type="textarea" value='' name="comments" />
+      <input id='submit-form' class='cell small-12 success button' type="submit" value="Send" name="submittedData" />
     </div>
+
 
   </form>
   <div class='grid-x align-center'>
