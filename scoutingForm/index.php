@@ -616,6 +616,18 @@
                               <text x="1920.31px" y="757.116px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:101.258px;fill:rgb(242,242,242);">U<tspan x="2003.56px 2086.81px 2170.07px " y="757.116px 757.116px 757.116px ">NDO</tspan></text>
                           </g>
                       </g>
+                      <g transform="matrix(1.15263,0,0,1,73.6873,95.821)">
+                          <circle cx="1217.4" cy="34.776" r="20.494" style="fill:rgb(229,69,0);"/>
+                      </g>
+                      <g transform="matrix(-0.593854,-6.30957e-17,7.27262e-17,-0.515216,2642.8,522.874)">
+                          <path d="M1096.18,721.608C1118.14,721.608 1135.96,739.431 1135.96,761.385C1135.96,783.339 1118.14,801.163 1096.18,801.163C1074.23,801.163 1056.41,783.339 1056.41,761.385C1056.41,739.431 1074.23,721.608 1096.18,721.608ZM1096.18,741.496C1107.16,741.496 1116.07,750.408 1116.07,761.385C1116.07,772.362 1107.16,781.274 1096.18,781.274C1085.21,781.274 1076.3,772.362 1076.3,761.385C1076.3,750.408 1085.21,741.496 1096.18,741.496Z" style="fill:rgb(255,232,22);"/>
+                      </g>
+                      <g transform="matrix(0.372349,0,0,0.323042,1443.46,119.363)">
+                          <text x="1584.6px" y="55.27px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:57.26px;fill:rgb(242,242,242);stroke:black;stroke-width:3.1px;stroke-linecap:butt;stroke-miterlimit:1.41421;">H<tspan x="1631.67px 1674.5px 1715.2px 1762.28px " y="55.27px 55.27px 55.27px 55.27px ">ATCH</tspan></text>
+                      </g>
+                      <g transform="matrix(0.424936,0,0,0.368666,1016.21,117.776)">
+                          <text x="1176.99px" y="55.27px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:57.26px;fill:rgb(242,242,242);stroke:black;stroke-width:2.71px;stroke-linecap:butt;stroke-miterlimit:1.41421;">C<tspan x="1224.07px 1271.14px 1318.22px 1368.49px " y="55.27px 55.27px 55.27px 55.27px ">ARGO</tspan></text>
+                      </g>
                   </g>
               </g>
           </svg>
