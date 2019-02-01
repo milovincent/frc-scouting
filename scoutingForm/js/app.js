@@ -62,8 +62,19 @@ $('g#autoMove').mousedown(function(){
   message('moved-in-sandstorm');
 });
 $('g#undo').mousedown(function(){
+  popped = $times[$times.length-1];
   $times.pop();
+  console.log("popped: ".concat(popped));
   console.log($times);
+if(popped.name == "foul"){
+  var foulValUndone = Number($('#foulVal').val())-1;
+  $('#foulVal').val(foulValUndone);
+  $('#foul').html(foulValUndone);
+} else if(popped.name == "techFoul"){
+  var techFoulValUndone = Number($('#techFoulVal').val())-1;
+  $('#techFoulVal').val(techFoulValUndone);
+  $('#techFoul').html(techFoulValUndone);
+}
   $('#message').html('undone');
 });
 
