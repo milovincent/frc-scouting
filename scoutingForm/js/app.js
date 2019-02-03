@@ -64,13 +64,13 @@ $('g#autoMove').mousedown(function(){
 $('g#undo').mousedown(function(){
   popped = $times[$times.length-1];
   $times.pop();
-  console.log("popped: ".concat(popped));
+  console.log("popped: ",popped.value, $times[$times.length-1]);
   console.log($times);
-if(popped.name == "foul"){
+if(popped.value == "foul"){
   var foulValUndone = Number($('#foulVal').val())-1;
   $('#foulVal').val(foulValUndone);
   $('#foul').html(foulValUndone);
-} else if(popped.name == "techFoul"){
+} else if(popped.value == "techFoul"){
   var techFoulValUndone = Number($('#techFoulVal').val())-1;
   $('#techFoulVal').val(techFoulValUndone);
   $('#techFoul').html(techFoulValUndone);
