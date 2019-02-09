@@ -575,7 +575,7 @@
                       </g>
                       <g id="broke" transform="matrix(1.56806,0,0,1.56806,147.569,-894.304)">
                           <g transform="matrix(0.73507,0,0,0.637732,-47.1164,631.434)">
-                              <circle cx="1504.38" cy="1216.41" r="140.491" style="fill:rgb(22,22,22);fill-opacity:0.8;stroke:white;stroke-width:3.28px;"/>
+                              <circle cx="1504.38" cy="1216.41" r="140.491" style="fill:rgb(255,0,0);stroke:white;stroke-width:3.28px;"/>
                           </g>
                           <g transform="matrix(0.313995,0,0,0.272416,612.889,1078.08)">
                               <text x="1175.06px" y="1251.5px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:121.338px;fill:rgb(242,242,242);">B<tspan x="1274.82px 1374.58px 1481.09px 1580.85px " y="1251.5px 1251.5px 1251.5px 1251.5px ">ROKE</tspan></text>
