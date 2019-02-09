@@ -77,7 +77,9 @@ if(popped.value == "foul"){
 }
   $('#message').html('undone');
 });
-
+$('g#disconnected').mousedown(function(){
+  message('disconnected');
+});
   $('g#blue-hab-1').mousedown(function(){
     message('blue-hab-1');
   });

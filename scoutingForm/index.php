@@ -660,6 +660,18 @@
                           <text x="-129.943px" y="1331.7px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:71.104px;fill:rgb(242,242,242);">P<tspan x="-75.407px -24.864px 27.069px 81.605px 136.141px " y="1331.7px 1331.7px 1331.7px 1331.7px 1331.7px ">LAYER</tspan></text>
                           <text x="-143.307px" y="1405.13px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:71.104px;fill:rgb(242,242,242);">S<tspan x="-88.77px -43.504px 9.678px 60.222px 87.087px 149.505px " y="1405.13px 1405.13px 1405.13px 1405.13px 1405.13px 1405.13px ">TATION</tspan></text>
                       </g>
+                      <g id="disconnected" transform="matrix(1.15263,0,0,1,73.6873,95.821)">
+                          <circle cx="1505.24" cy="954.49" r="83.713" style="fill:rgb(255,0,0);"/>
+                          <clipPath id="_clip2">
+                              <circle cx="1505.24" cy="954.49" r="83.713"/>
+                          </clipPath>
+                          <g clip-path="url(#_clip2)">
+                              <g transform="matrix(1,0,0,1,60.5798,12.9434)">
+                                  <text x="1388.25px" y="954.49px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36.188px;fill:rgb(242,242,242);">D<tspan x="1418px 1431.67px 1459.43px 1489.18px " y="954.49px 954.49px 954.49px 954.49px ">ISC.</tspan></text>
+                              </g>
+                          </g>
+                          <circle cx="1505.24" cy="954.49" r="83.713" style="fill:none;stroke:white;stroke-width:10.67px;"/>
+                      </g>
                   </g>
               </g>
           </svg>
