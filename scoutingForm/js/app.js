@@ -80,6 +80,9 @@ if(popped.value == "foul"){
 $('g#disconnected').mousedown(function(){
   message('disconnected');
 });
+$('g#defense').mousedown(function(){
+  message('defense');
+});
   $('g#blue-hab-1').mousedown(function(){
     message('blue-hab-1');
   });

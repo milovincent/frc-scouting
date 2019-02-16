@@ -600,6 +600,18 @@
                 </g>
                 <circle cx="1505.24" cy="954.49" r="83.713" style="fill:none;stroke:white;stroke-width:10.67px;"/>
             </g>
+            <g id="defense" transform="matrix(2.00043,0,0,1.1475,-1200.76,21.5232)">
+                <circle cx="1503.24" cy="503.717" r="70.924" style="fill:rgb(255,0,0);"/>
+                <clipPath id="_clip3">
+                    <circle cx="1503.24" cy="503.717" r="70.924"/>
+                </clipPath>
+                <g clip-path="url(#_clip3)">
+                    <g id="_-DEFENSE---Art-Text-" serif:id="(DEFENSE) (Art Text)" transform="matrix(0.576192,0,0,0.87146,657.358,74.076)">
+                        <text x="1388.06px" y="503.717px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:29.928px;fill:rgb(242,242,242);">D<tspan x="1412.67px 1435.62px 1456.9px 1479.85px 1504.46px 1527.41px " y="503.717px 503.717px 503.717px 503.717px 503.717px 503.717px ">EFENSE</tspan></text>
+                    </g>
+                </g>
+                <circle cx="1503.24" cy="503.717" r="70.924" style="fill:none;stroke:white;stroke-width:0.63px;"/>
+            </g>
         </g>
     </g>
 </svg>
